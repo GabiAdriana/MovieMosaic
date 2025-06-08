@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do filme</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <script src="assets/scripts/app.js"></script>
+    
+    <!------------------------Cabeçalho------------------------------>
+    
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="logo col-xl-4">MovieMosaic</div>
+                    <nav class="nav-menu col-xl-4">
+                    <a href="index.html">Home</a>
+                    <a href="cadastro_filmes.html">Cadastro de filmes</a>
+                    <a href="favoritos.html">Favoritos</a>
+                    <a href="#" id="logoutBtn">Login | Logout</a>
+                    </nav>
+            </div>
+        </div>
+    </header>
+
+    <!------------------------Corpo Principal------------------------------>
+
+    <main class="main">
+        <div class=" row row-details bg-dark">
+            <!-- Coluna da Esquerda -->
+            <div class="col-md-8">
+                <section class="details">
+                    <div class="movie-details">
+                        <div id="tela">Carregando...</div>
+                        <!-- Os detalhes do filme serão inseridos aqui via JS -->
+                    </div>
+                </section>
+            </div>
+
+            <!-- Coluna da Direita -->
+            <div class="col-md-4">
+                <section class="site-description">
+                    <h3>Sobre o MovieMosaic</h3>
+                    <p>O MovieMosaic é o seu lugar para explorar uma vasta coleção de filmes de todos os gêneros. Seja para um fim de semana tranquilo ou uma maratona, temos algo para todos os gostos.</p>
+                    <p>Nosso objetivo é fornecer uma experiência completa e intuitiva para você descobrir filmes que sejam sua cara, de forma fácil e acessível.</p>
+                </section>
+
+                <section class="genres-box">
+                    <h3>Gêneros de Filmes</h3>
+                    <div class="genre-links">
+                        <a href="genero.html?categoria=Romance">Romance</a>
+                        <a href="genero.html?categoria=Ação">Ação</a>
+                        <a href="genero.html?categoria=Terror">Terror</a>
+                        <a href="genero.html?categoria=Comédia">Comédia</a>
+                        <a href="genero.html?categoria=Drama">Drama</a>
+                        <a href="genero.html?categoria=Ficção Científica">Ficção Científica</a>
+                        <a href="genero.html?categoria=Aventura">Aventura</a>
+                        <a href="genero.html?categoria=Suspense">Suspense</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!------------------------Rodapé------------------------------>
+
+    <footer class="footer">
+        <!-- Copyright -->
+        <div class="text-center mb-4">
+            &copy; 2025 MovieMosaic. Todos os direitos reservados.
+        </div>
+    
+        <!-- Informações do(a) Aluno(a) -->
+        <div class="container mt-4 border-top pt-3">
+            <h3><strong>Informações do(a) Aluno(a)</strong></h3>
+            <div class="row">
+                <!-- Coluna Sobre -->
+                <div class="col-md-8">
+                    <h5><strong>Sobre:</strong></h5>
+                    <p>Projeto acadêmico desenvolvido por Gabriela Adriana, com o 
+                        objetivo de praticar HTML, CSS e JavaScript durante o 
+                        curso de Desenvolvimento de Interfaces Web na Pontifícia 
+                        Universidade Católica de Minas Gerais. 
+                        Projeto feito com muito código e energético!</p>
+                </div>
+    
+                <!-- Coluna Autoria -->
+                <div class="col-md-4">
+                    <h5><strong>Autoria:</strong></h5>
+                    <p><strong>Aluno:</strong> Gabriela Almeida</p>
+                    <p><strong>Curso:</strong> Engenharia de Computação</p>
+                    <p><strong>Turma:</strong> Noite</p>
+    
+                    <p class="mt-3"><h5><strong>Redes Sociais:</strong></h5>
+                    <a href="#" class="me-2"><i class="bi bi-facebook fs-5"></i></a>
+                    <a href="#" class="me-2"><i class="bi bi-twitter fs-5"></i></a>
+                    <a href="#" class="me-2"><i class="bi bi-instagram fs-5"></i></a>
+                    <a href="#"><i class="bi bi-linkedin fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+        const logoutBtn = document.getElementById('logoutBtn');
+
+        if (usuarioLogado) {
+            logoutBtn.textContent = `${usuarioLogado.nome} | Click para logout`;
+
+            logoutBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            localStorage.removeItem('usuarioLogado');
+            alert('Logout realizado com sucesso!');
+            window.location.href = 'login.html'; // Redireciona para a página de login
+            });
+        } else {
+            logoutBtn.textContent = 'Login';
+            logoutBtn.setAttribute('href', 'login.html');
+        }
+    </script>
+
+    <!-- Primeiro carregue os dados -->
+    <script src="assets/scripts/app.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

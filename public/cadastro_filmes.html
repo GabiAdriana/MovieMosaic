@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de filmes</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    
+    
+    <!------------------------Cabeçalho------------------------------>
+    
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="logo col-xl-4">MovieMosaic</div>
+                    <nav class="nav-menu col-xl-4">
+                    <a href="index.html">Home</a>
+                    <a href="cadastro_filmes.html">Cadastro de filmes</a>
+                    <a href="favoritos.html">Favoritos</a>
+                    <a href="#" id="logoutBtn">Login | Logout</a>
+                    </nav>
+            </div>
+        </div>
+    </header>
+
+    <!------------------------Corpo Principal------------------------------>
+
+    <main class="main">
+        <div class=" row row-details bg-dark">
+            <!-- Coluna da Esquerda -->
+            <div class="col-md-8">
+                <section class="register">
+                    <div class="movie-register">
+                        <form id="form-filme" class="text-white p-4">
+                            <h2 class="mb-4">Cadastro de Filme</h2>
+
+                            <div class="mb-3">
+                                <label for="titulo" class="form-label">Título</label>
+                                <input type="text" class="form-control" id="titulo" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="descricao" class="form-label">Descrição</label>
+                                <textarea class="form-control" id="descricao" rows="2" required></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="conteudo" class="form-label">Conteúdo</label>
+                                <textarea class="form-control" id="conteudo" rows="4" required></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="categoria" class="form-label">Categoria</label>
+                                <input type="text" class="form-control" id="categoria" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="autor" class="form-label">Autor</label>
+                                <input type="text" class="form-control" id="autor" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="data" class="form-label">Data de Lançamento</label>
+                                <input type="date" class="form-control" id="data" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="imagem" class="form-label">Imagem Principal (poster)</label>
+                                <input type="text" class="form-control" id="imagem" placeholder="assets/img/filmeX.jpg" required>
+                            </div>
+
+                            <h4 class="text-white mt-4">Imagens dos Atores (até 3)</h4>
+                            <div class="row">
+                                <div class="mb-3 col-md-6">
+                                    <label for="imgAtor1" class="form-label">Imagem 1 - URL</label>
+                                    <input type="text" class="form-control" id="imgAtor1" placeholder="assets/img/atores/ator1.jpg">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label for="descAtor1" class="form-label">Descrição 1</label>
+                                    <input type="text" class="form-control" id="descAtor1" placeholder="Nome do ator/personagem">
+                                </div>
+
+                                <div class="mb-3 col-md-6">
+                                    <label for="imgAtor2" class="form-label">Imagem 2 - URL</label>
+                                    <input type="text" class="form-control" id="imgAtor2" placeholder="assets/img/atores/ator2.jpg">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label for="descAtor2" class="form-label">Descrição 2</label>
+                                    <input type="text" class="form-control" id="descAtor2" placeholder="Nome do ator/personagem">
+                                </div>
+
+                                <div class="mb-3 col-md-6">
+                                    <label for="imgAtor3" class="form-label">Imagem 3 - URL</label>
+                                    <input type="text" class="form-control" id="imgAtor3" placeholder="assets/img/atores/ator3.jpg">
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label for="descAtor3" class="form-label">Descrição 3</label>
+                                    <input type="text" class="form-control" id="descAtor3" placeholder="Nome do ator/personagem">
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Cadastrar Filme</button>
+                        </form>
+
+                            <h2 class="text-white mb-3">Tabela de Filmes Cadastrados</h2>
+                            <table id="tabela-filmes" class="table table-striped table-dark">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Título</th>
+                                        <th>Autor</th>
+                                        <th>Categoria</th>
+                                        <th>Data</th>
+                                        <th>Ações</th>
+                                    </tr>
+                                    </thead>
+                                <tbody>
+                                    <!-- Linhas serão inseridas via JS -->
+                                </tbody>
+                            </table>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Coluna da Direita -->
+            <div class="col-md-4">
+                <section class="site-description">
+                    <h3>Sobre o MovieMosaic</h3>
+                    <p>O MovieMosaic é o seu lugar para explorar uma vasta coleção de filmes de todos os gêneros. Seja para um fim de semana tranquilo ou uma maratona, temos algo para todos os gostos.</p>
+                    <p>Nosso objetivo é fornecer uma experiência completa e intuitiva para você descobrir filmes que sejam sua cara, de forma fácil e acessível.</p>
+                </section>
+
+                <section class="genres-box">
+                    <h3>Gêneros de Filmes</h3>
+                    <div class="genre-links">
+                        <a href="genero.html?categoria=Romance">Romance</a>
+                        <a href="genero.html?categoria=Ação">Ação</a>
+                        <a href="genero.html?categoria=Terror">Terror</a>
+                        <a href="genero.html?categoria=Comédia">Comédia</a>
+                        <a href="genero.html?categoria=Drama">Drama</a>
+                        <a href="genero.html?categoria=Ficção Científica">Ficção Científica</a>
+                        <a href="genero.html?categoria=Aventura">Aventura</a>
+                        <a href="genero.html?categoria=Suspense">Suspense</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!------------------------Rodapé------------------------------>
+
+    <footer class="footer">
+        <!-- Copyright -->
+        <div class="text-center mb-4">
+            &copy; 2025 MovieMosaic. Todos os direitos reservados.
+        </div>
+    
+        <!-- Informações do(a) Aluno(a) -->
+        <div class="container mt-4 border-top pt-3">
+            <h3><strong>Informações do(a) Aluno(a)</strong></h3>
+            <div class="row">
+                <!-- Coluna Sobre -->
+                <div class="col-md-8">
+                    <h5><strong>Sobre:</strong></h5>
+                    <p>Projeto acadêmico desenvolvido por Gabriela Adriana, com o 
+                        objetivo de praticar HTML, CSS e JavaScript durante o 
+                        curso de Desenvolvimento de Interfaces Web na Pontifícia 
+                        Universidade Católica de Minas Gerais. 
+                        Projeto feito com muito código e energético!</p>
+                </div>
+    
+                <!-- Coluna Autoria -->
+                <div class="col-md-4">
+                    <h5><strong>Autoria:</strong></h5>
+                    <p><strong>Aluno:</strong> Gabriela Almeida</p>
+                    <p><strong>Curso:</strong> Engenharia de Computação</p>
+                    <p><strong>Turma:</strong> Noite</p>
+    
+                    <p class="mt-3"><h5><strong>Redes Sociais:</strong></h5>
+                    <a href="#" class="me-2"><i class="bi bi-facebook fs-5"></i></a>
+                    <a href="#" class="me-2"><i class="bi bi-twitter fs-5"></i></a>
+                    <a href="#" class="me-2"><i class="bi bi-instagram fs-5"></i></a>
+                    <a href="#"><i class="bi bi-linkedin fs-5"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const usuarioLogado = JSON.parse(localStorage.getItem('usuarioLogado'));
+        const logoutBtn = document.getElementById('logoutBtn');
+
+        if (usuarioLogado) {
+            logoutBtn.textContent = `${usuarioLogado.nome} | Click para logout`;
+
+            logoutBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            localStorage.removeItem('usuarioLogado');
+            alert('Logout realizado com sucesso!');
+            window.location.href = 'login.html'; // Redireciona para a página de login
+            });
+        } else {
+            logoutBtn.textContent = 'Login';
+            logoutBtn.setAttribute('href', 'login.html');
+        }
+    </script>
+
+    <script src="assets/scripts/app.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

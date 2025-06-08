@@ -1,0 +1,416 @@
+/* =========================
+   ESTILOS GERAIS
+========================= */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-fluid {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* =========================
+   HEADER / NAVEGAÇÃO
+========================= */
+.header {
+    background-color: #000;
+    color: rgb(205, 22, 22);
+    padding: 10px 10px;
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+}
+
+.logo {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.search-form button {
+    background-color: rgb(205, 22, 22);
+    color: white;
+    border-radius: 6px;
+} 
+
+.input-group .form-control,
+.input-group .btn {
+  height: 45px;
+  border-radius: 100px;
+}
+
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+    position: center;
+    padding: 10px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: rgb(150, 0, 0);
+}
+
+/* =========================
+   FORMULÁRIOS
+========================= */
+input, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+
+
+/* =========================
+   CONTEÚDO PRINCIPAL
+========================= */
+.main-content {
+    width: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 2fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Colunas da estrutura */
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* =========================
+   SEÇÃO DESCRIÇÃO E GÊNEROS
+========================= */
+.site-description h3,
+.genres-box h3 {
+    font-size: 24px;
+    color: white;
+    padding: 20px 20px;
+}
+
+.site-description p {
+    font-size: 16px;
+    color: white;
+}
+
+.genre-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.genre-links a {
+    text-decoration: none;
+    color: rgb(205, 22, 22);
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.genre-links a:hover {
+    background-color: rgb(150, 0, 0);
+}
+
+/* =========================
+   CARROSSEL
+========================= */
+.carrossel {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.carrossel img {
+    width: 350px;
+    height: 650px;
+    object-fit: contain;
+    background-color: #171718;
+}
+
+.carrossel-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.carrossel-title {
+    font-size: 24px;
+    font-weight: bold;
+    width: 40%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+}
+
+.carrossel-description {
+    font-size: 16px;
+    width: 40%;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    color: white;
+}
+
+/* =========================
+   FILMES EM DESTAQUE
+========================= */
+
+.categories, .favoritos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+
+.category-item {
+  background-color: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.category-item:hover {
+  transform: scale(1.05);
+}
+
+.filme-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.category-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/* Informações do filme */
+.filme-info {
+  padding: 10px;
+}
+
+.category-item h3,
+.category-item p {
+  color: white;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* Estilo do link */
+.category-item a,
+.category-item a:visited,
+.category-item a:hover,
+.category-item a:active {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+.footer {
+    background-color: #d71717;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 30px;
+}
+
+.footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    background-color: rgb(150, 0, 0);
+}
+
+/* =========================
+   UTILITÁRIOS / OUTROS
+========================= */
+.tela {
+    color: white;
+}
+
+/* =========================
+   PÁGINA detalhes.html
+========================= */
+.movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+.movie-details img {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.movie-details h1 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.movie-details p {
+    font-size: 20px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+/* Colunas da seção detalhes */
+.row-details {
+    margin-top: 20px;
+}
+.left-column {
+    flex: 2;
+    min-width: 300px;
+}
+
+.right-column {
+    flex: 1;
+    min-width: 250px;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+/* Estilo do overlay do modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.603);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Conteúdo do modal */
+.modal-content {
+  background-color: #000000;
+  color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 251, 255, 0.715);
+}
+
+/* Botão de fechar */
+.close-btn {
+  position: absolute;
+  right: 0.5rem;
+  top: 0rem;
+  bottom: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  color:#ffffff
+}
+
+.modal-content input {
+  background-color: #e5e5e5;
+  border: 1px solid #b9b9b9;
+  padding: 10px;
+}
+
+.btn {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos das abas */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+
+.tab-link {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.tab-link.active {
+  background-color: #ff0000;
+  color: rgb(255, 255, 255);
+}
+
+.tab-content {
+  display: none;
+  color:#ffffff
+}
+
+.tab-content.active {
+  display: block;
+  color:#ffffff;
+}
+
+
+

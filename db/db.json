@@ -1,0 +1,166 @@
+{
+  "filmes": [
+    {
+      "id": "1",
+      "titulo": "Avatar",
+      "descricao": "Uma jornada épica em um mundo alienígena visualmente deslumbrante.",
+      "conteudo": "Dirigido por James Cameron, 'Avatar' conta a história de Jake Sully, um ex-fuzileiro paraplégico que é enviado a Pandora, um mundo alienígena repleto de biodiversidade e espiritualidade. Lá, por meio de um avatar geneticamente modificado, ele entra em contato com os Na'vi, uma raça nativa que vive em perfeita harmonia com a natureza. Conforme Jake se aproxima da tribo e se apaixona por Neytiri, ele começa a questionar sua missão e lealdade à humanidade. Com efeitos visuais revolucionários e uma forte mensagem ecológica, o filme marcou época e transformou o cinema 3D.",
+      "categoria": "Ficção Científica",
+      "autor": "James Cameron",
+      "data": "2009-12-18",
+      "imagem": "assets/img/avatar.jpg",
+      "imagens_complementares": [
+        {
+          "id": 1,
+          "src": "assets/img/atores/sam_worthington.jpg",
+          "descricao": "Sam Worthington como Jake Sully"
+        },
+        {
+          "id": 2,
+          "src": "assets/img/atores/zoe_saldana.jpg",
+          "descricao": "Zoë Saldaña como Neytiri"
+        },
+        {
+          "id": 3,
+          "src": "assets/img/atores/sigourney_weaver.jpg",
+          "descricao": "Sigourney Weaver como Dra. Grace Augustine"
+        }
+      ],
+      "favorito": false
+    },
+    {
+      "id": "2",
+      "titulo": "Titanic",
+      "descricao": "Um romance trágico a bordo do navio mais famoso da história.",
+      "conteudo": "Em 'Titanic', James Cameron combina romance e tragédia ao retratar a fatídica viagem do navio mais famoso da história. Rose, uma jovem da alta sociedade presa a um noivado sem amor, conhece Jack, um artista pobre que embarca de última hora. Durante a travessia, os dois vivem um amor intenso e verdadeiro, confrontando as rígidas divisões sociais da época. A narrativa ganha dramaticidade com o iceberg que selará o destino de milhares a bordo. Vencedor de 11 Oscars, o filme é lembrado não só pelo impacto emocional, mas também por sua grandiosidade técnica e histórica.",
+      "categoria": "Romance",
+      "autor": "James Cameron",
+      "data": "1997-12-19",
+      "imagem": "assets/img/titanic.jpg",
+      "imagens_complementares": [
+        {
+          "id": 1,
+          "src": "assets/img/atores/leonardo_dicaprio.jpg",
+          "descricao": "Leonardo DiCaprio como Jack Dawson"
+        },
+        {
+          "id": 2,
+          "src": "assets/img/atores/kate_winslet.jpg",
+          "descricao": "Kate Winslet como Rose DeWitt Bukater"
+        },
+        {
+          "id": 3,
+          "src": "assets/img/atores/billy_zane.jpg",
+          "descricao": "Billy Zane como Cal Hockley"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "titulo": "O Senhor dos Anéis: O Retorno do Rei",
+      "descricao": "A batalha final pela Terra-média chega ao clímax.",
+      "conteudo": "Na épica conclusão da trilogia de Peter Jackson, 'O Retorno do Rei' acompanha Frodo e Sam em sua jornada final para destruir o Um Anel em Mordor, enquanto Aragorn assume seu destino como rei e lidera os homens em uma batalha decisiva contra Sauron. O filme intercala momentos íntimos e heroicos, retratando a luta entre o bem e o mal em escalas pessoais e épicas. Com atuações memoráveis, cenários deslumbrantes e uma narrativa emocionalmente poderosa, a obra se consolidou como uma das maiores realizações do cinema fantástico, conquistando 11 Oscars, incluindo Melhor Filme.",
+      "categoria": "Fantasia",
+      "autor": "Peter Jackson",
+      "data": "2003-12-17",
+      "imagem": "assets/img/senhor_dos_aneis.jpg",
+      "imagens_complementares": [
+        {
+          "id": 1,
+          "src": "assets/img/atores/elijah_wood.jpg",
+          "descricao": "Elijah Wood como Frodo Baggins"
+        },
+        {
+          "id": 2,
+          "src": "assets/img/atores/viggo_mortensen.jpg",
+          "descricao": "Viggo Mortensen como Aragorn"
+        },
+        {
+          "id": 3,
+          "src": "assets/img/atores/ian_mckellen.jpg",
+          "descricao": "Ian McKellen como Gandalf"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "titulo": "Vingadores: Ultimato",
+      "descricao": "Os heróis da Marvel enfrentam sua maior batalha.",
+      "conteudo": "Após o estalo de Thanos que eliminou metade dos seres vivos do universo, os heróis remanescentes enfrentam a dor, a perda e a desesperança. Em 'Vingadores: Ultimato', Tony Stark, Steve Rogers, Natasha Romanoff, Bruce Banner e outros unem forças para uma última tentativa de reverter o desastre. Viajando no tempo para recuperar as Joias do Infinito, os Vingadores confrontam suas próprias histórias e sacrifícios. O filme culmina em uma batalha colossal e emotiva que celebra mais de uma década de filmes do MCU. Um verdadeiro épico moderno que consagrou o gênero de super-heróis no cinema.",
+      "categoria": "Ação",
+      "autor": "Anthony e Joe Russo",
+      "data": "2019-04-26",
+      "imagem": "assets/img/vingadores_ultimato.jpg",
+      "imagens_complementares": [
+        {
+          "id": 1,
+          "src": "assets/img/atores/robert_downey_jr.jpg",
+          "descricao": "Robert Downey Jr. como Tony Stark / Homem de Ferro"
+        },
+        {
+          "id": 2,
+          "src": "assets/img/atores/chris_evans.jpg",
+          "descricao": "Chris Evans como Steve Rogers / Capitão América"
+        },
+        {
+          "id": 3,
+          "src": "assets/img/atores/scarlett_johansson.jpg",
+          "descricao": "Scarlett Johansson como Natasha Romanoff / Viúva Negra"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "titulo": "Barbie",
+      "descricao": "A icônica boneca ganha vida em uma aventura existencial divertida e reflexiva.",
+      "conteudo": "Em 'Barbie', Greta Gerwig reinventa a icônica boneca com uma abordagem surpreendentemente filosófica e satírica. No colorido e perfeito mundo de Barbieland, Barbie começa a ter pensamentos existenciais e embarca em uma jornada ao mundo real, acompanhada por Ken. Lá, ela descobre as complexidades da vida humana, da identidade e da desigualdade de gênero. O filme equilibra humor, crítica social e estética vibrante para construir uma narrativa envolvente e reflexiva. Com atuações cativantes e uma direção inteligente, 'Barbie' rompe expectativas e provoca discussões sobre feminilidade, liberdade e autenticidade.",
+      "categoria": "Comédia",
+      "autor": "Greta Gerwig",
+      "data": "2023-07-20",
+      "imagem": "assets/img/barbie_live_action.jpg",
+      "imagens_complementares": [
+        {
+          "id": 1,
+          "src": "assets/img/atores/margot_robbie.jpg",
+          "descricao": "Margot Robbie como Barbie"
+        },
+        {
+          "id": 2,
+          "src": "assets/img/atores/ryan_gosling.jpg",
+          "descricao": "Ryan Gosling como Ken"
+        },
+        {
+          "id": 3,
+          "src": "assets/img/atores/america_ferrera.jpg",
+          "descricao": "America Ferrera como Gloria"
+        }
+      ]
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Gabriela Almeida",
+      "login": "gabriela",
+      "senha": "123456",
+      "email": "gabriela@example.com",
+      "admin": true,
+      "favoritos": [
+        "2",
+        "3",
+        "5"
+      ]
+    },
+    {
+      "id": "56ca",
+      "nome": "Estou testando",
+      "login": "teste",
+      "senha": "123",
+      "email": "teste@teste.com",
+      "admin": false,
+      "favoritos": [
+        "4"
+      ]
+    }
+  ]
+}
