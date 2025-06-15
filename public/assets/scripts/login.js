@@ -83,3 +83,28 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 });
+
+  // =================================================================
+  // Funçõe especifica para controlar a exibição do botão de cadastro
+  // =================================================================
+
+  function controlarBotaoCadastro() {
+  const usuarioStr = localStorage.getItem('usuarioLogado');
+  const cadastroLink = document.querySelector('nav.nav-menu a[href="cadastro_filmes.html"]');
+
+  // Se não tem usuário logado, ou usuário não é admin, esconde o link
+  if (!usuarioStr) {
+    cadastroLink.style.display = 'none';
+    return;
+  }
+
+  const usuario = JSON.parse(usuarioStr);
+
+  if (usuario.admin) {
+    cadastroLink.style.display = 'inline-block'; // mostra só se for admin
+  } else {
+    cadastroLink.style.display = 'none'; // esconde se não for admin
+  }
+}
+
+window.addEventListener('DOMContentLoaded', controlarBotaoCadastro);

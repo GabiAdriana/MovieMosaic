@@ -159,7 +159,8 @@
       "email": "teste@teste.com",
       "admin": false,
       "favoritos": [
-        "4"
+        "4",
+        "2"
       ]
     }
   ]
